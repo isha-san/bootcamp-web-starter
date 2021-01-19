@@ -2,6 +2,7 @@ import React from 'react';
 import { Fragment, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button, Toolbar } from "@material-ui/core";
+import TextStyle from '../styles.js';
 
 function NavBar() {
     
@@ -9,7 +10,10 @@ function NavBar() {
     const authlinks = 
     <Fragment>
         <Toolbar className="align-items-right">
-            <NavLink className="a" exact to="/dashboard">Meeting Dashboard</NavLink>
+            
+                <NavLink className="a" exact to="/dashboard">Meeting Dashboard</NavLink>
+            
+            
             <button id="logout-btn" >Log Out</button>
         </Toolbar>
     </Fragment>
@@ -18,8 +22,10 @@ function NavBar() {
     const unauthlinks = 
     <Fragment>
         <Toolbar className="align-items-right">
-            <NavLink className="a" exact to="/signup">Sign Up</NavLink>
-            <NavLink className="a" exact to="/login">Log In</NavLink>
+            
+                <NavLink className="a" exact to="/signup">Sign Up</NavLink>
+                <NavLink className="a" exact to="/login">Log In</NavLink>
+            
         </Toolbar>
     </Fragment>
     return (
