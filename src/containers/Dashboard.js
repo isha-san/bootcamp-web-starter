@@ -27,13 +27,14 @@ function Dashboard() {
         return(
             <ListItem>
                 <ListItemText primary="Meeting   "></ListItemText>
+                <br/>
                 <ListItemText primary={meeting.host}></ListItemText>
+                <br/>
                 <ListItemText primary={`(${meeting.privacy})`}></ListItemText>
                 <ListItem>
                     <Button>Join</Button>
                 </ListItem>
             </ListItem>
-            
         );
     });
     return(
@@ -42,9 +43,8 @@ function Dashboard() {
             <List>
                 {meetingsList}
             </List>
-            <ButtonStyle>
             <Button id="new-meeting">+</Button>
-            </ButtonStyle>
+            
         </div>
         
     );
