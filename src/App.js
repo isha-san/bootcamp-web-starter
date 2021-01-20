@@ -14,8 +14,8 @@ const App = () => (
       <ApolloProvider client={client}>
         <div className="App">
           <Switch>
-            <Route path="/" component={Dashboard} />
-            <Route path="/login" component={Login} />
+            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/login" component={Login} />
           </Switch>
         </div>
       </ApolloProvider>

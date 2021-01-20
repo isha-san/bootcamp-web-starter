@@ -11,6 +11,7 @@ function NavBar() {
     <Fragment>
         <Toolbar className="align-items-right">
                 <NavLink className="a" exact to="/">Meeting Dashboard</NavLink>
+                <NavLink className="a" exact to="/login">Log In (test)</NavLink>
             <button id="logout-btn" >Log Out</button>
         </Toolbar>
     </Fragment>
