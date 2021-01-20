@@ -27,10 +27,17 @@ function Dashboard() {
         return(
             <ListItem>
                 <ListItemText primary="Meeting   "></ListItemText>
-                <br/>
+                <ListItem>
+                    <br/>
+                </ListItem>
                 <ListItemText primary={meeting.host}></ListItemText>
-                <br/>
+                <ListItem>
+                    <br/>
+                </ListItem>
                 <ListItemText primary={`(${meeting.privacy})`}></ListItemText>
+                <ListItem>
+                    <br/>
+                </ListItem>
                 <ListItem>
                     <Button>Join</Button>
                 </ListItem>

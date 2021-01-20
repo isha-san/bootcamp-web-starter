@@ -10,10 +10,7 @@ function NavBar() {
     const authlinks = 
     <Fragment>
         <Toolbar className="align-items-right">
-            
-                <NavLink className="a" exact to="/dashboard">Meeting Dashboard</NavLink>
-            
-            
+                <NavLink className="a" exact to="/">Meeting Dashboard</NavLink>
             <button id="logout-btn" >Log Out</button>
         </Toolbar>
     </Fragment>
@@ -22,10 +19,16 @@ function NavBar() {
     const unauthlinks = 
     <Fragment>
         <Toolbar className="align-items-right">
-            
-                <NavLink className="a" exact to="/signup">Sign Up</NavLink>
-                <NavLink className="a" exact to="/login">Log In</NavLink>
-            
+                <NavLink className="a" exact to="/signup">
+                    <TextStyle>
+                        Sign Up
+                    </TextStyle>
+                </NavLink>
+                <NavLink className="a" exact to="/login">
+                    <TextStyle>
+                        Login
+                    </TextStyle>
+                </NavLink>
         </Toolbar>
     </Fragment>
     return (
