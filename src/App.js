@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 import client from './client'
 import Dashboard from './containers/Dashboard/index.js';
-import Profile from './containers/Profile/index.js';
+import Login from './containers/Login/index.js';
 
 
 const App = () => (
@@ -15,7 +15,7 @@ const App = () => (
         <div className="App">
           <Switch>
             <Route path="/" component={Dashboard} />
-            <Route path="/profile" component={Profile} />
+            <Route path="/login" component={Login} />
           </Switch>
         </div>
       </ApolloProvider>

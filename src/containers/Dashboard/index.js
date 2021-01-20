@@ -4,7 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Nav from '../../components/NavBar.js';
-import ButtonStyle from '../styles.js';
+import ButtonStyle from '../../styles.js';
 
 
 function Dashboard() {
