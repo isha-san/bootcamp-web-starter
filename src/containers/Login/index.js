@@ -15,10 +15,10 @@ import { AccountCircle } from '@material-ui/icons';
 import Nav from '../../components/NavBar.js';
 
 const Profile = () => (
-    
+  <>
+  <Nav></Nav>
   <Container maxWidth="sm">
-      <Nav></Nav>
-    <Grid container direction="column" justify="center" alignItems="center" spacing={2}>
+    <Grid container direction="column" justify="flex-start" alignItems="center" spacing={4}>
       <Grid item>
         <AccountCircle />
       </Grid>
@@ -59,6 +59,7 @@ const Profile = () => (
       </Grid>
     </Grid>
   </Container>
+  </>
 )
 
 export default Profile;
