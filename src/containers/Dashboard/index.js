@@ -9,6 +9,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import Nav from '../../components/NavBar'
 import ButtonStyle from '../../styles.js'
 import { FancyContainer } from './styles'
+import { FancyNavLink } from '../../components/styles'
 import SearchBar from '../../components/SearchBar'
 
 
@@ -54,9 +55,11 @@ function Dashboard() {
 
   const AddMeetingButton = () => (
     <Container>
-      <Fab>
-        <AddIcon />
-      </Fab>
+        <FancyNavLink className="a" exact to="/newmeeting">
+          <Fab>
+            <AddIcon />
+          </Fab>
+        </FancyNavLink>
     </Container>
   )
   return (

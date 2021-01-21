@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, InputLabel, KeyboardDatePicker, Select, FormControl, Button, TextField } from '@material-ui/core'
 import { FancyContainer } from './styles'
 import Nav from '../../components/NavBar'
+import { FancyNavLink } from '../../components/styles'
 
 function Popup() {
   const classes = ['CS50', 'EC10a', 'EXPOS20'];
@@ -57,7 +58,9 @@ function Popup() {
             </Grid>
           </Grid>
           <Grid item >
-              <Button value="submit">Create Meeting!</Button>
+          <FancyNavLink className="a" exact to="/">
+            <Button value="submit">Create Meeting!</Button>
+          </FancyNavLink>
             </Grid>
         </Grid>
       </div>
