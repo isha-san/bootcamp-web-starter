@@ -16,7 +16,10 @@ function NavBar() {
             <FancyNavLink className="a" exact to="/">Meeting Dashboard</FancyNavLink>
           </Grid>
           <Grid item>
-            <FancyNavLink className="a" exact to="/login">Log In (test)</FancyNavLink>
+            <FancyNavLink className="a" exact to="/login">Log In</FancyNavLink>
+          </Grid>
+          <Grid item>
+          <FancyNavLink className="a" exact to="/newmeeting">New Meeting</FancyNavLink>
           </Grid>
           <Grid item>
             <Button id="logout-btn">Log Out</Button>

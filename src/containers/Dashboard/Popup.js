@@ -1,5 +1,7 @@
 import React from 'react';
 import { Grid, InputLabel, KeyboardDatePicker, Select, FormControl, Button, TextField } from '@material-ui/core'
+import { FancyContainer } from './styles'
+import Nav from '../../components/NavBar'
 
 function Popup() {
   const classes = ['CS50', 'EC10a', 'EXPOS20'];
@@ -15,7 +17,10 @@ function Popup() {
   return (
     <div className='popup'>
       <div className='popup_inner'>
-        <h1>New Meeting</h1>
+        <Nav />
+        <FancyContainer>
+          <h1>New Meeting</h1>
+        </FancyContainer>
         <Grid container justify='flex-start' direction='row' alignItems='center' spacing = {2}>
           <Grid item >
             <Grid container justify='flex-start' direction='row' alignItems='center' >
