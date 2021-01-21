@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Nav from '../../components/NavBar.js';
 import ButtonStyle from '../../styles.js';
-
+import Popup from './Popup.js';
 
 function Dashboard() {
+    
     const meetingData = [
         {   privacy: "public", 
             class: "CS50", 
@@ -50,7 +51,7 @@ function Dashboard() {
             <List>
                 {meetingsList}
             </List>
-            <Button id="new-meeting">+</Button>
+            <Button id="new-meeting" >+</Button>
             
         </div>
         

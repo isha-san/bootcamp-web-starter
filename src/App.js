@@ -6,6 +6,7 @@ import theme from './theme'
 import client from './client'
 import Dashboard from './containers/Dashboard/index.js';
 import Login from './containers/Login/index.js';
+import Popup from './containers/Dashboard/Popup.js';
 
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/newmeeting" component={Popup} />
           </Switch>
         </div>
       </ApolloProvider>
