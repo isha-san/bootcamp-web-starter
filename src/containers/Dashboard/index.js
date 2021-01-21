@@ -3,11 +3,13 @@ import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
-import { Fab, Container, Grid, Paper } from '@material-ui/core'
+import { Fab, Container, Grid, Paper, InputBase } from '@material-ui/core'
 import AddIcon from '@material-ui/icons/Add'
+import SearchIcon from '@material-ui/icons/Search'
 import Nav from '../../components/NavBar'
 import ButtonStyle from '../../styles.js'
 import { FancyContainer } from './styles'
+import SearchBar from '../../components/SearchBar'
 
 
 function Dashboard() {
@@ -60,6 +62,7 @@ function Dashboard() {
   return (
     <div>
       <Nav />
+      <SearchBar />
       <List>
         {meetingsList}
       </List>
