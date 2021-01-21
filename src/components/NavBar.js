@@ -1,45 +1,55 @@
-import React from 'react';
-import { Fragment, useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Button, Toolbar } from "@material-ui/core";
-import TextStyle from '../styles.js';
+import React, { Fragment, useState, useEffect } from 'react';
+import { Button, Toolbar } from '@material-ui/core'
+import { FancyNavLink } from './styles';
+import TextStyle from '../styles.js'
+import theme from '../theme'
+import { Grid } from '@material-ui/core'
 
 function NavBar() {
-    
-    //The links that should be displayed if the user is authenticated
-    const authlinks = 
-    <Fragment>
-        <Toolbar className="align-items-right">
-                <NavLink className="a" exact to="/">Meeting Dashboard</NavLink>
-                <NavLink className="a" exact to="/login">Log In (test)</NavLink>
-                <NavLink className="a" exact to="/newmeeting">New Meeting (test)</NavLink>
-            <button id="logout-btn" >Log Out</button>
-        </Toolbar>
-    </Fragment>
+  // The links that should be displayed if the user is authenticated
 
-    //The links that should be displayed if the user is unauthenticated
-    const unauthlinks = 
-    <Fragment>
-        <Toolbar className="align-items-right">
-                <NavLink className="a" exact to="/signup">
-                    <TextStyle>
+  const authlinks = (
+    <>
+      <Toolbar className="align-items-right">
+        <Grid container direction="row" justify="flex-start" alignItems="center" spacing={2}>
+          <Grid item>
+            <FancyNavLink className="a" exact to="/">Meeting Dashboard</FancyNavLink>
+          </Grid>
+          <Grid item>
+            <FancyNavLink className="a" exact to="/login">Log In (test)</FancyNavLink>
+          </Grid>
+          <Grid item>
+            <Button id="logout-btn">Log Out</Button>
+          </Grid>
+        </Grid>
+      </Toolbar>
+    </>
+  )
+
+  // The links that should be displayed if the user is unauthenticated
+  const unauthlinks = (
+    <>
+      <Toolbar className="align-items-right">
+        <FancyNavLink className="a" exact to="/signup">
+          <TextStyle>
                         Sign Up
-                    </TextStyle>
-                </NavLink>
-                <NavLink className="a" exact to="/login">
-                    <TextStyle>
+          </TextStyle>
+        </FancyNavLink>
+        <FancyNavLink className="a" exact to="/login">
+          <TextStyle>
                         Login
-                    </TextStyle>
-                </NavLink>
-        </Toolbar>
-    </Fragment>
-    return (
-        <nav style={{backgroundColor : "#263238"}}>
-            <Fragment>
-            { (1 === 1) ? authlinks : unauthlinks }
-            </Fragment>
-        </nav>
-    );
+          </TextStyle>
+        </FancyNavLink>
+      </Toolbar>
+    </>
+  )
+  return (
+    <nav style={{ backgroundColor: theme.colors.primary.primary }}>
+      <>
+        { (1 === 1) ? authlinks : unauthlinks }
+      </>
+    </nav>
+  )
 }
 
-export default NavBar; 
+export default NavBar
