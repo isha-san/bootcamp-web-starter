@@ -1,9 +1,8 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import { Button, Toolbar } from '@material-ui/core'
-import { FancyNavLink } from './styles';
-import TextStyle from '../styles.js'
+import React, { Fragment } from 'react'
+import { Button, Toolbar, Grid } from '@material-ui/core'
+import { FancyNavLink } from './styles'
+import TextStyle from '../styles'
 import theme from '../theme'
-import { Grid } from '@material-ui/core'
 
 function NavBar() {
   // The links that should be displayed if the user is authenticated
@@ -16,8 +15,11 @@ function NavBar() {
             <FancyNavLink className="a" exact to="/">Meeting Dashboard</FancyNavLink>
           </Grid>
           <Grid item>
-            <FancyNavLink className="a" exact to="/login">Log In (test)</FancyNavLink>
+            <FancyNavLink className="a" exact to="/login">Log In</FancyNavLink>
           </Grid>
+          {/* <Grid item>
+          <FancyNavLink className="a" exact to="/newmeeting">New Meeting</FancyNavLink>
+          </Grid> */}
           <Grid item>
             <Button id="logout-btn">Log Out</Button>
           </Grid>
@@ -32,12 +34,12 @@ function NavBar() {
       <Toolbar className="align-items-right">
         <FancyNavLink className="a" exact to="/signup">
           <TextStyle>
-                        Sign Up
+            Sign Up
           </TextStyle>
         </FancyNavLink>
         <FancyNavLink className="a" exact to="/login">
           <TextStyle>
-                        Login
+            Login
           </TextStyle>
         </FancyNavLink>
       </Toolbar>
