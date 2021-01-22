@@ -13,6 +13,7 @@
     "apollo-link-error": "^1.1.13",
     "apollo-link-http": "^1.5.17",
     "fontsource-roboto": "^4.0.0",
+    "googleapis": "^39.2.0",
     "graphql": "^14.7.0",
     "graphql-tag": "^2.11.0",
     "react": "^16.14.0",
