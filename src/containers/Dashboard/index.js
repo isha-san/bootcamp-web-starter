@@ -3,15 +3,14 @@ import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
-import { Fab, Container, Grid, Paper, InputBase } from '@material-ui/core'
+import {
+  Fab, Container, Grid, Paper,
+} from '@material-ui/core'
 import AddIcon from '@material-ui/icons/Add'
-import SearchIcon from '@material-ui/icons/Search'
 import Nav from '../../components/NavBar'
-import ButtonStyle from '../../styles.js'
 import { FancyContainer } from './styles'
 import { FancyNavLink } from '../../components/styles'
 import SearchBar from '../../components/SearchBar'
-
 
 function Dashboard() {
   const meetingData = [
@@ -33,33 +32,37 @@ function Dashboard() {
 
   const meetingsList = meetingData.map(meeting => (
     <FancyContainer>
-    <ListItem>
-      <ListItemText primary="Meeting   " />
-      <ListItem>
-        <br />
-      </ListItem>
-      <ListItemText primary={meeting.host} />
-      <ListItem>
-        <br />
-      </ListItem>
-      <ListItemText primary={`(${meeting.privacy})`} />
-      <ListItem>
-        <br />
-      </ListItem>
-      <ListItem>
-        <Button>Join</Button>
-      </ListItem>
-    </ListItem>
+      <Grid item>
+        <Paper>
+          <ListItem>
+            <ListItemText primary={`Meeting: ${meeting.class}`} />
+            <ListItem>
+              <br />
+            </ListItem>
+            <ListItemText primary={meeting.host} />
+            <ListItem>
+              <br />
+            </ListItem>
+            <ListItemText primary={`(${meeting.privacy})`} />
+            <ListItem>
+              <br />
+            </ListItem>
+            <ListItem>
+              <Button>Join</Button>
+            </ListItem>
+          </ListItem>
+        </Paper>
+      </Grid>
     </FancyContainer>
   ))
 
   const AddMeetingButton = () => (
     <Container>
-        <FancyNavLink className="a" exact to="/newmeeting">
-          <Fab>
-            <AddIcon />
-          </Fab>
-        </FancyNavLink>
+      <FancyNavLink className="a" exact to="/newmeeting">
+        <Fab>
+          <AddIcon />
+        </Fab>
+      </FancyNavLink>
     </Container>
   )
   return (
@@ -67,7 +70,9 @@ function Dashboard() {
       <Nav />
       <SearchBar />
       <List>
-        {meetingsList}
+        <Grid container direction="column" justify="space-evenly">
+          {meetingsList}
+        </Grid>
       </List>
       <AddMeetingButton />
     </div>
